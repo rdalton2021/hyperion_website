@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title id = name of the page > Hyperion3360 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    width:100%;
+    height:100%;
+}
+
+/*header*/
+
+.dropbtn {
+  margin-right: -45px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  border: none;
+  border-radius: 4px;
+  line-height: 25px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 70px;
+  max-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #1C1C1C;
+}
+
+.dropdown:hover .dropdown-content {
+  min-width: 70px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+min-width: 50px;
+background-color: #f1f1f1;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #000000;
+  padding: 20px 16px;
+  
+}
+
+.header a, .logo {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-center {
+float: center;
+padding: 45px;
+}
+
+
+.header a.tab:hover {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 150px) {
+  .header a.tab {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+
+  .header-center {
+    float: none;
+    display: block;
+    text-align: center;
+   }
+  
+ 
+}
+
+/* footer */
+
+.footer {
+  position: absolute;
+  left: 0;
+  margin-top: 30px;
+  bottom: 1;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* footer left */
+
+.footer-left {
+ margin-left: 30px;
+ float:left;
+}
+
+.school {
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.team {
+ color: #ff8000;
+ float: right;
+ margin-top: 90px;
+}
+
+/* footer right */
+
+.footer-right {
+ margin-top: 50px;
+ margin-right: 30px;
+ float: right;
+}
+
+
+/* slideshow*/
+
+.sponsor-slide {
+ position: relative;
+ 
+}
+
+
+.mySlides {display: none}
+.slide-img {
+ vertical-align: middle;
+ max-height:400px;
+ max-width: 1000px;
+}
+
+.slideshow-container {
+  float: center;
+  position: relative;
+  margin: none;
+  overflow: hidden;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* robot hover row 1 */
+
+.hover-img1 {
+  display: inline-block;
+}
+
+ .hover-txt1 {
+  visibility: hidden;
+  width: 120px;
+  color: #f1f1f1;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: -15px;
+  margin-left:-60px;
+}
+.hover-img1:hover .hover-txt1 {
+  visibility: visible;
+}
+
+/* robot hover row 2 */
+
+.hover-img2 {
+  display: inline-block;
+}
+
+ .hover-txt2 {
+  visibility: hidden;
+  width: 120px;
+  color: #f1f1f1;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  margin-top: -15px;
+  margin-left: -60px;
+}
+.hover-img2:hover .hover-txt2 {
+  visibility: visible;
+}
+
+/* img settings */
+
+.robot-img1 {
+    display: inline-block;
+    transition: transform .2s;
+    width:120px;
+    height:120px;
+    padding:20px;
+}
+.robot-img1:hover{
+    transform:scale(1.1);
+}
+
+ .robot-img2 {
+    display: inline-block;
+    transition: transform .2s;
+    width:120px;
+    height:120px;
+    padding:20px;
+}
+.robot-img2:hover{
+    transform:scale(1.1);
+}
+
+/* sponsors*/
+
+.sponsors-left {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsor {
+ max-height:400px;
+ max-width: 200px;
+ vertical-align: middle;
+ padding: 17px;
+ padding-top: 150px;
+}
+
+.sponsors-right {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* first descripon */
+
+.des .top {
+  background-color: #424242;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.des .txt {
+  margin-left: 30px;
+}
+
+</style>
+</head>
+
+
+<body bgcolor="#151515">
+
+<!-- header -->
+ <div class="header">
+   <img class="logo" src="./img/sponsor/logo.PNG" alt="hyperion logo" style="width:250px;height:169px;">
+     <div class="header-center">
+        <h1 style="font-family: Copperplate"> <font size="+100" color="#FF8000">Hyperion 3360 </font> </h1>
+       <div class="header-right">
+         <a class="tab" href="./main.html"> <font color="#FFFFFF"> Home </font></a>
+         <a class="tab" href="#contact"> <font color="#FFFFFF"> Contact</font> </a>
+         <a class="tab" href="./about.html"><font color="#FFFFFF">About</font> </a>
+           <div class="dropdown">
+             <button class="dropbtn">Years</button>
+              <div class="dropdown-content">
+                <a href="./hyperion2023.html">2023</a>
+                <a href="./hyperion2022.html">2022</a>
+                <a href="./hyperion2020.html">2020</a>
+                <a href="./hyperion2019.html">2019</a>
+                <a href="./hyperion2018.html">2018</a>
+                <a href="./hyperion2017.html">2017</a>
+                <a href="./hyperion2016.html">2016</a>
+                <a href="./hyperion2015.html">2015</a>
+                <a href="./hyperion2014.html">2014</a>
+              </div>
+           </div>        
+       </div>
+     </div>
+ </div> 
+
+
+<!-- commanditaires -->
+
+<div style="float: left">
+<div class="sponsors-left">
+<img class="sponsor" src="./img/sponsor/fondationcsrs.png" width="100%" height="100%"> <br>
+<img class="sponsor" src="./img/sponsor/umanoblanc.png" width="100%" height="100%"> <br>
+<img class="sponsor" src="./img/sponsor/brp.png" width="50%" height="50%"> <br>
+</div>
+</div>
+
+<div style="float:right">
+<div class="sponsors-right">
+<img class="sponsor" src="./img/sponsor/fondationbombardier.png" width="100%" height="100%"> <br>
+<img class="sponsor" src="./img/sponsor/conceptromec.png" width="100%" height="100%"> <br>
+<img class="sponsor" src="./img/sponsor/sanimarc.png" width="60%" height="60%"> <br>
+</div>
+</div>
+
+<!-- slideshow -->
+
+
+<div class="slideshow-container">
+<center>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg4.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg5.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg6.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img class="slide-img" src="./img/slideshowimg7.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+</center>
+</div>
+<br>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 4000); }
+</script>
+
+</div>
+
+<!-- robot hover -->
+
+<!--row 1-->
+
+<center>
+ <div class="hover-img1">
+  <a href="./hyperion2014.html"> <img class="robot-img1" src='https://www.educative.io/static/imgs/logos/logoMarkWhite.png'> </a>
+  <span class="hover-txt1">Darwin</span> </div>
+
+ <div class="hover-img1"  >
+   <a href="./hyperion2015.html"> <img class="robot-img1" src="./img/musee2015.JPG"> </a>
+  <span class="hover-txt1">Oversteer</span> </div>
+
+ <div class="hover-img1" >
+  <a href="./hyperion2016.html"> <img class="robot-img1" src="./img/musee2016.JPG"> </a>
+  <span class="hover-txt1">Manticore</span> </div>
+
+ <div class="hover-img1"  >
+   <a href="./hyperion2017.html"> <img class="robot-img1" src="./img/musee2017.JPG"> </a>
+  <span class="hover-txt1">Warthog</span> </div>
+
+ <div class="hover-img1">
+   <a href="./hyperion2018.html"> <img class="robot-img1" src="./img/musee2018.JPG"> </a>
+  <span class="hover-txt1">Thunderstorm</span>
+   </div>
+</center>
+
+<!-- row 2 -->
+<div style="    margin-top: 30px">
+
+
+<center>
+ <div class="hover-img2" >
+   <a href="./hyperion2019.html"><img class="robot-img2" src="./img/musee2019.JPG"> </a>
+  <span class="hover-txt2">Blackout</span>
+   </div>
+ <div class="hover-img2" >
+   <a href="./hyperion2020.html"><img class="robot-img2" src="./img/musee2020.JPG"> </a>
+  <span class="hover-txt2">Reacon</span>
+   </div>
+ <div class="hover-img2" >
+  <a href="./hyperion2022.html"><img class="robot-img2" src="./img/musee2022.JPG"> </a>
+  <span class="hover-txt2">Reaper</span>
+   </div>
+ <div class="hover-img2">
+   <a href="./hyperion2023.html"><img class="robot-img2" src="./img/musee2023.JPG"> </a>
+  <span class="hover-txt2">Vendetta</span>
+   </div>
+</center>
+
+</div>
+
+<!-- first description -->
+
+ <div class="des"> 
+  <font color="#f1f1f1">
+   <div class="top">
+    <h1 class="txt"> What is FIRST? </h1>
+   </div>
+   
+   <br>
+   <p class="txt"> FIRST Robotics Competition is... </p>
+  </font>
+ </div>
+
+<!-- footer -->
+
+<div class="footer">
+  <div class="footer-left">
+    <h1 class="team" style="font-family: Copperplate"> <font size="+150">Hyperion 3360 </font></h1>
+  </div>
+
+  <div class="footer-right">
+   <h4 class="contacts" <br>Contact us! <br>e-mail: 3360.hyperioncontact@gmail.com </h4>
+    <img class="school" src="./img/sponsor/leber.png" style="width:190px;height:72px;"> 
+
+  </div>
+</div>
+
+</body>
+</html>

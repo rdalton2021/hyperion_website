@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
 <title id = name of the page > Hyperion3360 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,19 +15,74 @@ body{
     height:100%;
 }
 
+@media  screen and (min-width: 300px) and (max-width: 450px){
+
+  .header {
+  background-color: #000000;
+  padding: 20px 10px;
+  
+}
+
+.header a, .logo {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 120%;
+  border-radius: 4px;
+}
+
+.header-center {
+float: center;
+padding: 45px;
+font-size: 10px;
+}
+
+
+.header a.tab:hover {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+.header-right {
+  float: right;
+  position: absolute;
+  margin-left: 750px;
+}
+
+  .header a.tab {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+
+  .header-center {
+    float: none;
+    display: inline-block;
+    text-align: center;
+   }
+  
+  
+}
+
+@media screen and (min-width:1470px) { 
+/** CSS code for this size here **/ 
+
+
 /*header*/
 
 .dropbtn {
-  margin-right: -45px;
+  display: inline-block;
+  margin-right: auto;
   background-color: #000000;
   color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 80%; 
   border: none;
   border-radius: 4px;
-  line-height: 25px;
+  line-height: 120%;
 }
 
 .dropdown {
@@ -83,14 +137,15 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
+  font-size: 80%; 
+  line-height: 120%;
   border-radius: 4px;
 }
 
 .header-center {
 float: center;
 padding: 45px;
+font-size: 25px;
 }
 
 
@@ -101,9 +156,10 @@ padding: 45px;
 
 .header-right {
   float: right;
+  position: absolute;
+  margin-left: 740px;
 }
 
-@media screen and (max-width: 150px) {
   .header a.tab {
     float: left;
     display: block;
@@ -112,12 +168,11 @@ padding: 45px;
 
   .header-center {
     float: none;
-    display: block;
+    display: inline-block;
     text-align: center;
    }
   
  
-}
 
 /* footer */
 
@@ -167,7 +222,6 @@ padding: 45px;
 
 .sponsor-slide {
  position: relative;
- 
 }
 
 
@@ -206,13 +260,39 @@ padding: 45px;
   to {opacity: 1}
 }
 
-/* robot hover row 1 */
+/* robot hover */
 
-.hover-img1 {
-  display: inline-block;
+.robot_hover {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  margin: none;
+  overflow: hidden;
 }
 
- .hover-txt1 {
+.hover-img {
+  position: relative;
+  display: inline-block;
+  max-height: 40px;
+  margin: none;
+}
+
+/* robot hover row 1 */
+
+.row1 {
+  max-height: 170px;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+.row1 .hover-img {
+  display: inline-block;
+  margin: none;
+}
+
+.row1 .hover-txt {
   visibility: hidden;
   width: 120px;
   color: #f1f1f1;
@@ -223,17 +303,25 @@ padding: 45px;
   margin-top: -15px;
   margin-left:-60px;
 }
-.hover-img1:hover .hover-txt1 {
+.row1 .hover-img:hover .hover-txt {
   visibility: visible;
 }
 
 /* robot hover row 2 */
 
-.hover-img2 {
+.row2 {
+  max-height: 170px;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+.row2 .hover-img {
   display: inline-block;
 }
 
- .hover-txt2 {
+.row2 .hover-txt {
   visibility: hidden;
   width: 120px;
   color: #f1f1f1;
@@ -244,33 +332,26 @@ padding: 45px;
   margin-top: -15px;
   margin-left: -60px;
 }
-.hover-img2:hover .hover-txt2 {
+.row2 .hover-img:hover .hover-txt {
   visibility: visible;
 }
 
 /* img settings */
 
-.robot-img1 {
-    display: inline-block;
-    transition: transform .2s;
-    width:120px;
-    height:120px;
-    padding:20px;
+.robot-img {
+  position: relative;
+  display: inline-block;
+  transition: transform .2s;
+  width: 100%;
+  height: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  padding:20px;
 }
-.robot-img1:hover{
+.robot-img:hover{
     transform:scale(1.1);
 }
 
- .robot-img2 {
-    display: inline-block;
-    transition: transform .2s;
-    width:120px;
-    height:120px;
-    padding:20px;
-}
-.robot-img2:hover{
-    transform:scale(1.1);
-}
 
 /* sponsors*/
 
@@ -296,6 +377,11 @@ padding: 45px;
 
 /* first descripon */
 
+.des {
+  position: relative;
+  margin-top: 500px;
+}
+
 .des .top {
   background-color: #424242;
   margin-top: 100px;
@@ -304,6 +390,16 @@ padding: 45px;
 
 .des .txt {
   margin-left: 30px;
+  display: inline-block;
+}
+
+.des .frc_logo {
+  float: right;
+  text-align: left;
+  margin-right: 100px;
+  margin-top: 30px;
+}
+
 }
 
 </style>
@@ -314,9 +410,9 @@ padding: 45px;
 
 <!-- header -->
  <div class="header">
-   <img class="logo" src="./sponsor/logo.PNG" alt="hyperion logo" style="width:250px;height:169px;">
+   <img class="logo" src="./sponsor/logo.PNG" alt="hyperion logo" style="width:20%;height:10%; margin-top: -30px;">
      <div class="header-center">
-        <h1 style="font-family: Copperplate"> <font size="+100" color="#FF8000">Hyperion 3360 </font> </h1>
+        <h1 style="font-family: Copperplate"> <font color="#FF8000">Hyperion 3360 </font> </h1>
        <div class="header-right">
          <a class="tab" href="./main.html"> <font color="#FFFFFF"> Home </font></a>
          <a class="tab" href="#contact"> <font color="#FFFFFF"> Contact</font> </a>
@@ -421,54 +517,60 @@ function showSlides() {
 </script>
 
 <!-- robot hover -->
-
+<div class="robot_hover">
 <!--row 1-->
 
-<center>
- <div class="hover-img1">
-  <a href="./hyperion2014.html"> <img class="robot-img1" src='https://www.educative.io/static/imgs/logos/logoMarkWhite.png'> </a>
-  <span class="hover-txt1">Darwin</span> </div>
+<div class="row1">
+ <center> 
+ <div class="hover-img">
+  <a href="./hyperion2014.html"> <img class="robot-img" src='https://www.educative.io/static/imgs/logos/logoMarkWhite.png' style="width:100%"> </a>
+  <span class="hover-txt">Darwin</span> </div>
 
- <div class="hover-img1"  >
-   <a href="./hyperion2015.html"> <img class="robot-img1" src="./img/musee2015.JPG"> </a>
-  <span class="hover-txt1">Oversteer</span> </div>
+ <div class="hover-img"  >
+   <a href="./hyperion2015.html"> <img class="robot-img" src="./img/musee2015.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Oversteer</span> </div>
 
- <div class="hover-img1" >
-  <a href="./hyperion2016.html"> <img class="robot-img1" src="./img/musee2016.JPG"> </a>
-  <span class="hover-txt1">Manticore</span> </div>
+ <div class="hover-img" >
+  <a href="./hyperion2016.html"> <img class="robot-img" src="./img/musee2016.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Manticore</span> </div>
 
- <div class="hover-img1"  >
-   <a href="./hyperion2017.html"> <img class="robot-img1" src="./img/musee2017.JPG"> </a>
-  <span class="hover-txt1">Warthog</span> </div>
+ <div class="hover-img"  >
+   <a href="./hyperion2017.html"> <img class="robot-img" src="./img/musee2017.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Warthog</span> </div>
 
- <div class="hover-img1">
-   <a href="./hyperion2018.html"> <img class="robot-img1" src="./img/musee2018.JPG"> </a>
-  <span class="hover-txt1">Thunderstorm</span>
+ <div class="hover-img">
+   <a href="./hyperion2018.html"> <img class="robot-img" src="./img/musee2018.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Thunderstorm</span>
    </div>
-</center>
+ 
+ </center>
+</div>
 
+<br>
 <!-- row 2 -->
-<div style="margin-top: 30px">
+<div class="row2" style="margin-top: 30px">
 
 
 <center>
- <div class="hover-img2" >
-   <a href="./hyperion2019.html"><img class="robot-img2" src="./img/musee2019.JPG"> </a>
-  <span class="hover-txt2">Blackout</span>
+ <div class="hover-img" >
+   <a href="./hyperion2019.html"><img class="robot-img" src="./img/musee2019.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Blackout</span>
    </div>
- <div class="hover-img2" >
-   <a href="./hyperion2020.html"><img class="robot-img2" src="./img/musee2020.JPG"> </a>
-  <span class="hover-txt2">Reacon</span>
+ <div class="hover-img" >
+   <a href="./hyperion2020.html"><img class="robot-img" src="./img/musee2020.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Reacon</span>
    </div>
- <div class="hover-img2" >
-  <a href="./hyperion2022.html"><img class="robot-img2" src="./img/musee2022.JPG"> </a>
-  <span class="hover-txt2">Reaper</span>
+ <div class="hover-img" >
+  <a href="./hyperion2022.html"><img class="robot-img" src="./img/musee2022.JPG" style="width:100%"> </a>
+  <span class="hover-txt">Reaper</span>
    </div>
- <div class="hover-img2">
-   <a href="./hyperion2023.html"><img class="robot-img2" src="./img/musee2023.JPG"> </a>
-  <span class="hover-txt2">Vendetta</span>
+ <div class="hover-img">
+   <a href="./hyperion2023.html"><img class="robot-img" src="./img/musee2023.JPG" style="width:100%"style="width:100%"> </a>
+  <span class="hover-txt">Vendetta</span>
    </div>
 </center>
+
+</div>
 
 </div>
 
@@ -481,8 +583,20 @@ function showSlides() {
    </div>
    
    <br>
-   <p class="txt"> FIRST Robotics Competition is... </p>
+   <h4 class="txt"> Combining the excitement of sport with the rigors of science and technology, <br>
+    we call FIRST Robotics Competition the ultimate Sport for the Mind. <br>
+    High-school student participants call it “the hardest fun you’ll ever have.” <br>
+    Under strict rules, limited time and resources, teams of students are challenged <br>
+    to raise funds, design a team "brand," hone teamwork skills, and build and <br>
+    program industrial-size robots to play a difficult field game against like-minded <br>
+    competitors. It’s as close to real-world engineering as a student can get. <br> 
+    Volunteer professional mentors lend their time and talents to guide each team. <br>
+    Each season ends with an exciting FIRST Championship. </h4>
   </font>
+
+  <div class="frc_logo">
+    <a href="https://www.firstinspires.org/robotics/frc"> <img src="./img/frclogo.png" alt="frc logo"> </a>
+  </div>
  </div>
 
 <!-- footer -->
